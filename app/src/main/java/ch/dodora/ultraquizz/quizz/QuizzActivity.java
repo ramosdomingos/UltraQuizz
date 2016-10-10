@@ -19,7 +19,7 @@ public class QuizzActivity extends AppCompatActivity {
     public static final String EXTRA_TITLE = "QUIZZ_EXTRA_TITLE";
     private static final String THREAD_QUESTION = "THREAD_QUESTION";
     private ProgressBar pb_timeQuestion;
-    private TextView tv_theme;
+    private TextView tv_theme, tv_question;
     private Action action;
     private int currentQuestion = 0;
     private ToggleButton tb_joker_time, tb_joker_50, tb_joker_next, tb_joker_ultra;
@@ -60,11 +60,13 @@ public class QuizzActivity extends AppCompatActivity {
                     pb_timeQuestion.setProgress(timePassed++);
                     Thread.sleep(sleepTime);
                 } catch (InterruptedException e) {
+                    timePassed = 0;
                     sleepTime *= 10;
                 }
             } while (timePassed <= pb_timeQuestion.getMax());
         }
     };
+
     private Thread threadQuestion = new Thread(runnableQuestion, THREAD_QUESTION);
     private View.OnClickListener onClick_quizz = new View.OnClickListener() {
         @Override
@@ -92,6 +94,7 @@ public class QuizzActivity extends AppCompatActivity {
         //Initialization views
         pb_timeQuestion = (ProgressBar) findViewById(R.id.pb_quizz_timeQuestion);
         tv_theme = ((TextView) findViewById(R.id.tv_quizz_theme));
+        tv_question = ((TextView) findViewById(R.id.tv_quizz_question));
         tb_joker_time = (ToggleButton) findViewById(R.id.tb_quizz_joker_time);
         tb_joker_50 = (ToggleButton) findViewById(R.id.tb_quizz_joker_50);
         tb_joker_next = (ToggleButton) findViewById(R.id.tb_quizz_joker_next);
