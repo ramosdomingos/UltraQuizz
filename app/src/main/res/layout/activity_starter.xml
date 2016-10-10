@@ -34,14 +34,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClick_starter"
-                android:text="Les capitaux" />
+                android:text="Les capitales" />
 
             <Button
-                android:id="@+id/btn_starter_president"
+                android:id="@+id/btn_starter_mount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClick_starter"
-                android:text="Les présidents" />
+                android:text="Les sommets" />
 
         </LinearLayout>
 
