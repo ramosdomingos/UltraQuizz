@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quizz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ch.dodora.ultraquizz.quizz.QuizzActivity">
+
+    <TextView
+        android:id="@+id/tv_quizz_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="[THEME]"
+        android:textSize="30dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:gravity="fill"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/tb_quizz_joker_time"
+                android:layout_weight="1"
+                android:checked="true"
+                android:textOff="@string/joker_time"
+                android:textOn="@string/joker_time" />
+
+            <ToggleButton
+                android:id="@+id/tb_quizz_joker_50"
+                android:layout_weight="1"
+                android:checked="true"
+                android:textOff="@string/joker_50"
+                android:textOn="@string/joker_50" />
+
+            <ToggleButton
+                android:id="@+id/tb_quizz_joker_next"
+                android:layout_weight="1"
+                android:checked="true"
+                android:textOff="@string/joker_next"
+                android:textOn="@string/joker_next" />
+
+            <ToggleButton
+                android:id="@+id/tb_quizz_joker_ultra"
+                android:layout_weight="1"
+                android:checked="true"
+                android:textOff="@string/joker_ultra"
+                android:textOn="@string/joker_ultra" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="[QUESTION] ?"
+        android:textSize="30dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--Progress in milliseconds-->
+    <ProgressBar
+        android:id="@+id/pb_quizz_timeQuestion"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:progress="0" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:columnOrderPreserved="true"
+        android:rowCount="2"
+        android:rowOrderPreserved="true">
+
+        <Button
+            android:id="@+id/btn_quizz_answer0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:minLines="3"
+            android:text="[Answer 0]" />
+
+        <Button
+            android:id="@+id/btn_quizz_answer1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:minLines="3"
+            android:text="[Answer 1]" />
+
+        <Button
+            android:id="@+id/btn_quizz_answer2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:minLines="3"
+            android:text="[Answer 2]" />
+
+        <Button
+            android:id="@+id/btn_quizz_answer3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:minLines="3"
+            android:text="[Answer 3]" />
+
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UltraQuizz</string>
+
+    <!--Joker-->
+    <string name="joker_time">temps</string>
+    <string name="joker_50">50%</string>
+    <string name="joker_next">passe</string>
+    <string name="joker_ultra">ultra</string>
+
+
+</resources>
